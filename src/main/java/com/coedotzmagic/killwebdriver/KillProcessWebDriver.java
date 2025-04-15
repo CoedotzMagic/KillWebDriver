@@ -8,6 +8,7 @@ import java.io.IOException;
  */
 
 public class KillProcessWebDriver {
+    private static final String identity = "CoedotzMagic - KillWebDriver: ";
     private static final String FAILED_TO_KILL_PROCESS = "Failed to Kill Process WebDriver, please try again... msg: . ";
 
     public KillProcessWebDriver() {
@@ -43,7 +44,7 @@ public class KillProcessWebDriver {
                 }
             }
         } catch (IOException e) {
-            System.out.println(FAILED_TO_KILL_PROCESS + e.getMessage());
+            System.out.println(identity + FAILED_TO_KILL_PROCESS + e.getMessage());
             System.out.println("Error: " + e.getClass().getName() + " - " + e.getMessage());
             e.printStackTrace();
         }
